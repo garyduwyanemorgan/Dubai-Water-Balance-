@@ -1,0 +1,47 @@
+{
+  "closingLine": "Each figure is from a peer-reviewed paper or official source. None of them are controversial in isolation. The synthesis is what is missing.",
+  "cards": [
+    {
+      "id": "f1",
+      "number": "−96%",
+      "headline": "UAE Quaternary aquifer fresh groundwater storage, 1969 → 2015",
+      "source": "src_001",
+      "context": "Fresh groundwater storage in the UAE Quaternary aquifer is reported to have fallen from roughly 238 km³ in 1969 to about 10 km³ by 2015 — a decline of approximately 96% over four and a half decades of abstraction outpacing recharge."
+    },
+    {
+      "id": "f2",
+      "number": "5×",
+      "headline": "Artificial recharge vs. natural recharge",
+      "source": "src_002",
+      "context": "Across Gulf arid aquifer systems, engineered recharge (injection, infiltration, return flows) is estimated to run at roughly five times the natural recharge rate — meaning the subsurface increasingly reflects what we put in, not what nature delivers."
+    },
+    {
+      "id": "f3",
+      "number": "15 years",
+      "headline": "Al Ain has been flooding from rising water tables",
+      "source": "src_003",
+      "context": "Rising shallow groundwater in Al Ain has produced surface flooding and infrastructure damage documented in the literature for around fifteen years — an early, visible symptom of water accumulating in the wrong compartment."
+    },
+    {
+      "id": "f4",
+      "number": "4 km",
+      "headline": "Subsea pipeline to discharge TSE the land cannot absorb",
+      "source": "src_004",
+      "context": "A reported 4 km subsea pipeline is intended to discharge treated sewage effluent the landscape can no longer absorb — an explicit acknowledgement that reuse capacity on land has limits."
+    },
+    {
+      "id": "f5",
+      "number": "18 months",
+      "headline": "DECCA's age — the authority that should own the integrated question",
+      "source": "src_005",
+      "context": "The Dubai Environment, Climate Change Authority (DECCA) was established under Dubai Law 11/2024 and is roughly eighteen months old — a young authority still building the framework within which the integrated subsurface question could sit."
+    },
+    {
+      "id": "f6",
+      "number": "25%",
+      "headline": "Salinity excess of the Gulf vs. typical seawater",
+      "source": "src_006",
+      "context": "The Arabian Gulf is reported to sit around 25% saltier than typical open-ocean seawater, reflecting high evaporation, restricted exchange, and concentrated brine discharge — the receiving body for the region's desalination chain."
+    }
+  ]
+}

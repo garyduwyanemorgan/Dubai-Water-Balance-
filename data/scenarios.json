@@ -1,0 +1,44 @@
+{
+  "horizon": { "startYear": 2025, "endYear": 2040 },
+  "salinity": {
+    "S0": 4.5,
+    "S0_source": "src_010",
+    "R": 2.6,
+    "R_source": "src_010",
+    "climateFactor": { "observed": 1.0, "rcp45": 1.1, "rcp85": 1.25 },
+    "leakageRef": 0.15,
+    "irrigationRef": 1.0
+  },
+  "saltLoading": {
+    "c_NaCl": 1002,
+    "c_NaCl_source": "src_009",
+    "f_ret": 0.25,
+    "f_ret_source": "src_009",
+    "k_soil": 2.5,
+    "areaKm2": 1,
+    "unitScale": 0.2
+  },
+  "waterTable": {
+    "startDepth": 6.0,
+    "n_e": 0.15,
+    "n_e_source": "src_014",
+    "rechargeRef": 0.042,
+    "stormPulseRef": 3,
+    "stormContribution": 0.04,
+    "amberDepth": 2.0,
+    "redDepth": 1.0
+  },
+  "marine": {
+    "ambient": 39.0,
+    "ambient_source": "src_006",
+    "brineRef": 1.5,
+    "mixingSensitivity": 1.6,
+    "turnoverDamping": 0.6
+  },
+  "intervention": {
+    "none": 1.0,
+    "monitoring": 0.92,
+    "quality": 0.7,
+    "full": 0.45
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "deliverables": [
+    {
+      "id": "g1",
+      "title": "Integrated water-solute mass balance",
+      "explain": "A single accounting of water and dissolved salt across all four compartments. Today each authority measures its own slice; no one closes the books on where the salt goes."
+    },
+    {
+      "id": "g2",
+      "title": "Sentinel monitoring network with isotopic fingerprinting",
+      "explain": "A standing network of monitoring points using isotopic tracers to fingerprint sources — distinguishing leakage from irrigation return from natural recharge."
+    },
+    {
+      "id": "g3",
+      "title": "Vadose zone travel-time model",
+      "explain": "A model of how long water and solutes take to move through the unsaturated zone before reaching the shallow aquifer — the lag that determines when today's inputs become tomorrow's problem."
+    },
+    {
+      "id": "g4",
+      "title": "Salt mass balance per irrigation polygon",
+      "explain": "Salt-in versus salt-out for each irrigated parcel, so high-accumulation zones can be identified before water tables rise to the surface."
+    },
+    {
+      "id": "g5",
+      "title": "Emerging contaminant screening programme",
+      "explain": "Routine screening for pharmaceuticals, PFAS and other emerging contaminants in reused water and the shallow subsurface that receives it."
+    },
+    {
+      "id": "g6",
+      "title": "Storm-pulse recharge geochemistry study",
+      "explain": "Characterising the geochemistry of episodic stormwater recharge events, which deliver large volumes quickly and may mobilise accumulated salts."
+    },
+    {
+      "id": "g7",
+      "title": "ASR injectate–native formation compatibility assessment",
+      "explain": "Assessing whether injected treated water is chemically compatible with the native deep formation over time, to protect the strategic reserve."
+    },
+    {
+      "id": "g8",
+      "title": "Cross-authority subsurface fate standard",
+      "explain": "A shared standard defining who measures what, where, and to what protocol — so the shallow subsurface stops being everyone's edge case and no one's responsibility."
+    }
+  ],
+  "quote": {
+    "body": "Dubai and Abu Dhabi were built to never run out of water. They are now accumulating water in the wrong compartments at the wrong quality, on a trajectory that is already measurable in published data, and no single authority owns the question of what to do about it.\n\nThe subsurface owns the answer whether anyone asks it to or not.",
+    "attribution": "Gary Morgan, Forensic Asset Hydrology, GDM Enviro Consulting"
+  },
+  "contact": {
+    "lead": "Built to start the conversation.",
+    "body": "To discuss the data, the methodology, or the gaps —",
+    "email": "gary@gdmenviro.com"
+  }
+}
