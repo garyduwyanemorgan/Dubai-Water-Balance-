@@ -50,4 +50,4 @@ export const INTERVENTION_OPTIONS = [
 export const DISCLAIMER =
   "Reference physics, illustrative scenarios — not site-calibrated.";
 
-export const CONTACT_EMAIL = "gary@gdmenviro.com";
+export const CONTACT_EMAIL = "gary@gdm-enviro.com";
