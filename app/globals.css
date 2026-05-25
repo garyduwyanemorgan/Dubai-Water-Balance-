@@ -32,6 +32,26 @@ section[id] {
   scroll-margin-top: 0;
 }
 
+/* Print / PDF export: isolate the current trajectory scene. */
+@media print {
+  nav[aria-label="Scene navigation"] {
+    display: none !important;
+  }
+  #scarcity,
+  #inversion,
+  #compartments,
+  #gap {
+    display: none !important;
+  }
+  #trajectory {
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+  body {
+    background: #ffffff !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

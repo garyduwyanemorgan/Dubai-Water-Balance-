@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import {
   CLIMATE_OPTIONS,
   DEFAULT_PARAMS,
@@ -18,12 +19,28 @@ import {
   MARINE_AMBIENT,
   WATER_TABLE_BANDS,
 } from "@/lib/scenarios";
+import { paramsToQuery, queryToParams } from "@/lib/share";
 import Slider from "@/components/ui/Slider";
 import Toggle from "@/components/ui/Toggle";
 import TrajectoryChart from "@/components/viz/TrajectoryChart";
 
 export default function Trajectory() {
   const [params, setParams] = useState<ScenarioParams>(DEFAULT_PARAMS);
+  const [copied, setCopied] = useState(false);
+
+  // Hydrate from any shared URL params after mount (avoids SSR mismatch).
+  useEffect(() => {
+    if (window.location.search) {
+      setParams(queryToParams(window.location.search));
+    }
+  }, []);
+
+  // Keep the URL in sync so the current scenario is always shareable.
+  useEffect(() => {
+    const query = paramsToQuery(params);
+    const url = `${window.location.pathname}?${query}#trajectory`;
+    window.history.replaceState(null, "", url);
+  }, [params]);
 
   const result = useMemo(() => computeScenario(params), [params]);
 
@@ -32,6 +49,17 @@ export default function Trajectory() {
     value: ScenarioParams[K]
   ) {
     setParams((p) => ({ ...p, [key]: value }));
+  }
+
+  async function share() {
+    const url = `${window.location.origin}${window.location.pathname}?${paramsToQuery(params)}#trajectory`;
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      window.prompt("Copy this scenario link:", url);
+    }
   }
 
   const e = result.endpoints;
@@ -102,12 +130,28 @@ export default function Trajectory() {
               onChange={(v) => set("intervention", v)}
             />
 
-            <button
-              onClick={() => setParams(DEFAULT_PARAMS)}
-              className="w-full rounded-sm border border-deepblue/30 px-4 py-2 text-sm font-medium text-deepblue transition-colors hover:bg-deepblue hover:text-sand-light"
-            >
-              Reset to current trajectory
-            </button>
+            <div className="flex flex-col gap-2 print:hidden">
+              <button
+                onClick={() => setParams(DEFAULT_PARAMS)}
+                className="w-full rounded-sm border border-deepblue/30 px-4 py-2 text-sm font-medium text-deepblue transition-colors hover:bg-deepblue hover:text-sand-light"
+              >
+                Reset to current trajectory
+              </button>
+              <div className="flex gap-2">
+                <button
+                  onClick={share}
+                  className="flex-1 rounded-sm border border-deepblue/20 px-4 py-2 text-sm text-muted transition-colors hover:text-ink"
+                >
+                  {copied ? "Link copied ✓" : "Share this scenario"}
+                </button>
+                <button
+                  onClick={() => window.print()}
+                  className="flex-1 rounded-sm border border-deepblue/20 px-4 py-2 text-sm text-muted transition-colors hover:text-ink"
+                >
+                  Export PDF
+                </button>
+              </div>
+            </div>
           </div>
 
           {/* Charts */}
@@ -163,8 +207,13 @@ export default function Trajectory() {
 
         <p className="mt-6 text-xs text-muted">
           {DISCLAIMER} Equations are first-order analytical projections (GSRM
-          Tier 2), not full MODFLOW. Coefficients and sources are disclosed in
-          the data registry.
+          Tier 2), not full MODFLOW.{" "}
+          <Link
+            href="/methods"
+            className="text-deepblue underline underline-offset-2 hover:text-deepblue-light"
+          >
+            Methods &amp; full equation disclosure ↗
+          </Link>
         </p>
       </div>
     </section>
