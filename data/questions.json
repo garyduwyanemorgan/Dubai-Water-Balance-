@@ -1,0 +1,45 @@
+{
+  "q1": {
+    "id": "q1",
+    "act": 1,
+    "format": "slider",
+    "range": { "min": 1.0, "max": 10.0, "step": 0.1, "step_phone": 0.5 },
+    "unit": "M",
+    "display_unit": "million",
+    "prompt": "Dubai's population in 1985 was 370,000. What was it in 2024?",
+    "true_value": 3.7,
+    "source_id": "src_001",
+    "translation": {
+      "element_1": {
+        "heading": "What the number is",
+        "body": "Dubai grew from 370,000 to roughly 3.7 million between 1985 and 2024. A tenfold increase in one professional generation. London took a century to grow tenfold. Singapore took seventy years. Riyadh took fifty."
+      },
+      "element_2": {
+        "heading": "What it means hydrogeologically",
+        "body": "A water system designed for a city of that growth rate cannot iterate. The aquifer studies, soil baselines, and climatic envelopes — the slow work that underpins serious water management — were never given time. The infrastructure was built ahead of the science."
+      },
+      "element_3": {
+        "heading": "The timescale",
+        "body": "Forty years of expansion. A hydrogeological characterisation cycle in a comparable setting runs five to ten years. The science could not have kept pace even if it had been resourced to do so."
+      },
+      "element_4": {
+        "heading": "What follows from this",
+        "body": "Every system that came next — desalination, reuse, ASR, landscape irrigation — was scaled against an assumption of indefinite supply rather than against site-specific subsurface understanding. That premise sits underneath every number that follows in this game."
+      },
+      "element_5": {
+        "heading": "The source",
+        "body": "Dubai Statistics Center, open data portal. The figure is well-established and not contested."
+      }
+    },
+    "share_template": "I predicted Dubai's population at {prediction}M in 2024. The actual figure is 3.7 million — a tenfold increase in 40 years."
+  },
+  "q2": { "id": "q2", "stub": true, "act": 1 },
+  "q3": { "id": "q3", "stub": true, "act": 1 },
+  "q4": { "id": "q4", "stub": true, "act": 2 },
+  "q5": { "id": "q5", "stub": true, "act": 2 },
+  "q6": { "id": "q6", "stub": true, "act": 2 },
+  "q7": { "id": "q7", "stub": true, "act": 2 },
+  "q8": { "id": "q8", "stub": true, "act": 3 },
+  "q9": { "id": "q9", "stub": true, "act": 3 },
+  "q10": { "id": "q10", "stub": true, "act": 3 }
+}
