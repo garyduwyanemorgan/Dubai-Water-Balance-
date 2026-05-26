@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sand: #E8DCC4;
+  --deep-blue: #1B3A5C;
+  --brackish: #5A7A5F;
+  --amber: #C58A3A;
+  --clay: #8A6F58;
+  --stark-grey: #3D3D3D;
+  --off-white: #F5F1E8;
+}
+
+/* ── Range input reset (cross-browser) ───────────────────────────────────── */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 8px;
+  background: var(--off-white);
+  border-radius: 4px;
+  border: 1px solid rgba(27, 58, 92, 0.15);
+}
+
+input[type='range']::-moz-range-track {
+  height: 8px;
+  background: var(--off-white);
+  border-radius: 4px;
+  border: 1px solid rgba(27, 58, 92, 0.15);
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background: var(--deep-blue);
+  margin-top: -18px;
+  box-shadow: 0 2px 8px rgba(27, 58, 92, 0.3);
+  transition: transform 0.1s ease;
+}
+
+input[type='range']::-webkit-slider-thumb:active {
+  transform: scale(1.1);
+}
+
+input[type='range']::-moz-range-thumb {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background: var(--deep-blue);
+  border: none;
+  box-shadow: 0 2px 8px rgba(27, 58, 92, 0.3);
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range']:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px rgba(90, 122, 95, 0.4);
+}
+
+/* ── Custom utilities ────────────────────────────────────────────────────── */
+@layer utilities {
+  .h-sheet {
+    height: 85vh;
+    height: 85dvh;
+  }
+
+  .pb-safe {
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* ── Base body styles ────────────────────────────────────────────────────── */
+html,
+body {
+  height: 100%;
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  background-color: var(--sand);
+  color: var(--deep-blue);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
