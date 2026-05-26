@@ -13,7 +13,9 @@ interface RevealProps {
 function formatNumber(v: number, unit: string): string {
   if (unit === 'M') return `${v.toFixed(1)}M`
   if (unit === '%') return `${Math.round(v)}%`
-  return `${v}`
+  if (unit === 'L') return `${Math.round(v)}`
+  if (unit === '') return `${Math.round(v)}`
+  return `${Math.round(v)}${unit}`
 }
 
 export default function Reveal({ playerValue, trueValue, unit, displayUnit }: RevealProps) {

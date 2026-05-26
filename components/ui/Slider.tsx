@@ -43,10 +43,12 @@ export default function Slider({
     [step, min, max, hasBeenMoved, onFirstMove, onChange]
   )
 
-  const formatted =
-    unit === 'M'
-      ? `${value.toFixed(1)}M`
-      : `${value}${unit}`
+  let formatted: string
+  if (unit === 'M') formatted = `${value.toFixed(1)}M`
+  else if (unit === '%') formatted = `${Math.round(value)}%`
+  else if (unit === 'L') formatted = `${Math.round(value)}`
+  else if (unit === '') formatted = `${Math.round(value)}`
+  else formatted = `${Math.round(value)}${unit}`
 
   const labelOffset = `calc(${thumbPercent * 100}% - ${thumbPercent * 44}px)`
 
@@ -114,8 +116,8 @@ export default function Slider({
 
       {/* Range labels */}
       <div className="flex justify-between text-[13px]" style={{ color: 'rgba(27, 58, 92, 0.5)' }}>
-        <span>{min}{unit}</span>
-        <span>{max}{unit}</span>
+        <span>{unit === 'M' ? `${min}M` : unit === '%' ? `${min}%` : `${min}`}</span>
+        <span>{unit === 'M' ? `${max}M` : unit === '%' ? `${max}%` : `${max}`}</span>
       </div>
     </div>
   )
