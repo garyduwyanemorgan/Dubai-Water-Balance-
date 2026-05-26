@@ -5,7 +5,7 @@
     "format": "slider",
     "range": { "min": 1.0, "max": 10.0, "step": 0.1, "step_phone": 0.5 },
     "unit": "M",
-    "display_unit": "million",
+    "display_unit": "million people",
     "prompt": "Dubai's population in 1985 was 370,000. What was it in 2024?",
     "true_value": 3.7,
     "source_id": "src_001",
@@ -33,13 +33,283 @@
     },
     "share_template": "I predicted Dubai's population at {prediction}M in 2024. The actual figure is 3.7 million — a tenfold increase in 40 years."
   },
-  "q2": { "id": "q2", "stub": true, "act": 1 },
-  "q3": { "id": "q3", "stub": true, "act": 1 },
-  "q4": { "id": "q4", "stub": true, "act": 2 },
-  "q5": { "id": "q5", "stub": true, "act": 2 },
-  "q6": { "id": "q6", "stub": true, "act": 2 },
-  "q7": { "id": "q7", "stub": true, "act": 2 },
-  "q8": { "id": "q8", "stub": true, "act": 3 },
-  "q9": { "id": "q9", "stub": true, "act": 3 },
-  "q10": { "id": "q10", "stub": true, "act": 3 }
+  "q2": {
+    "id": "q2",
+    "act": 1,
+    "format": "slider",
+    "range": { "min": 50, "max": 800, "step": 10, "step_phone": 25 },
+    "unit": "L",
+    "display_unit": "litres per person per day",
+    "prompt": "How many litres of water does the average UAE resident use per day, across all uses?",
+    "true_value": 550,
+    "source_id": "src_002",
+    "translation": {
+      "element_1": {
+        "heading": "What the number is",
+        "body": "Around 550 litres per person per day, across all uses — domestic, landscape, district cooling, commercial. Among the highest figures in the world. Roughly three times the OECD average."
+      },
+      "element_2": {
+        "heading": "What it means hydrogeologically",
+        "body": "Per-capita figures hide compartments. Of that 550 litres, only a small fraction is consumed. Most enters one of three loops — sewerage, irrigation runoff, or evapotranspirative loss. The fraction that does not evaporate goes downward."
+      },
+      "element_3": {
+        "heading": "The timescale",
+        "body": "Today's figure. Per-capita consumption has been broadly stable for a decade while population has grown — meaning total system throughput has scaled with population, not efficiency."
+      },
+      "element_4": {
+        "heading": "What follows from this",
+        "body": "The aquifer beneath the UAE is the receiving body for the fraction of those 550 litres per person per day that does not leave by air. Multiply by population. Multiply by years. That is what the ground has been asked to absorb."
+      },
+      "element_5": {
+        "heading": "The source",
+        "body": "FAO AQUASTAT and World Bank water indicators. Definitions vary; the figure is conservative on the upper end of the cited range."
+      }
+    },
+    "share_template": "I guessed UAE water use at {prediction}L per person per day. The answer is around 550L — three times the OECD average."
+  },
+  "q3": {
+    "id": "q3",
+    "act": 1,
+    "format": "multiple_choice",
+    "options": ["About 10% of global output", "About 25% of global output", "About 40% of global output", "About 55% of global output"],
+    "prompt": "What share of the world's desalinated water comes from the GCC region?",
+    "true_value": "About 55% of global output",
+    "source_id": "src_003",
+    "translation": {
+      "element_1": {
+        "heading": "What the number is",
+        "body": "GCC states produce more desalinated water than the rest of the world combined. Roughly 55% of global output. The UAE alone accounts for a significant fraction of that."
+      },
+      "element_2": {
+        "heading": "What it means hydrogeologically",
+        "body": "Every litre of desalinated fresh water comes with roughly an equivalent volume of hyper-concentrated brine. The brine is returned to the Gulf — a semi-enclosed sea with limited turnover. Gulf salinity is now around 25% above typical ocean salinity."
+      },
+      "element_3": {
+        "heading": "The timescale",
+        "body": "Brine accumulation in the Gulf is a multi-decade trajectory. The Strait of Hormuz turnover time is years, not weeks. What is added now will still be measurable in fifty years."
+      },
+      "element_4": {
+        "heading": "What follows from this",
+        "body": "The marine compartment is not a hypothetical sink. It is already saturated by the standards of comparable semi-enclosed basins. Any new outfall enters a sea that is carrying historic load."
+      },
+      "element_5": {
+        "heading": "The source",
+        "body": "International Desalination Association annual figures; npj Clean Water 2026 review. Triangulated across multiple sources."
+      }
+    },
+    "share_template": "I guessed the GCC produces {prediction} of the world's desalinated water. The actual figure is about 55% — more than the rest of the world combined."
+  },
+  "q4": {
+    "id": "q4",
+    "act": 2,
+    "format": "slider",
+    "range": { "min": 0, "max": 100, "step": 1, "step_phone": 5 },
+    "unit": "%",
+    "display_unit": "percent lost",
+    "prompt": "The UAE has a shallow Quaternary aquifer that once held abundant fresh groundwater. How much of that fresh resource was lost between 1969 and 2015?",
+    "true_value": 96,
+    "source_id": "src_004",
+    "translation": {
+      "element_1": {
+        "heading": "What the number is",
+        "body": "The fresh-water portion of the UAE's Quaternary aquifer fell from approximately 238 km³ in 1969 to around 10 km³ in 2015. A 96% reduction. The volume lost is roughly four times the entire annual flow of the Nile."
+      },
+      "element_2": {
+        "heading": "What it means hydrogeologically",
+        "body": "This is not depletion. This is a facies change. The aquifer's character — its chemistry, its flow paths, its response to recharge — has fundamentally shifted from a fresh palaeo-system to a brackish anthropogenic one. The body of water beneath the country today is functionally different from the one the country was built over."
+      },
+      "element_3": {
+        "heading": "The timescale",
+        "body": "Forty-six years to lose 96%. Recovery on a comparable scale, under the most favourable management imaginable, would take centuries. The loss is irreversible on any policy-relevant horizon."
+      },
+      "element_4": {
+        "heading": "What follows from this",
+        "body": "Because the fresh layer is now thin, every new input — natural rainfall, irrigation losses, treated effluent, ASR injection — enters a system where the surface signal dominates the geochemistry. The aquifer cannot buffer what we put in. It records it."
+      },
+      "element_5": {
+        "heading": "The source",
+        "body": "Sherif et al., MDPI Water 2021. Regional aggregate; site-specific values vary significantly. Brackish and saline storage of around 660 km³ remains beneath, advancing upward as the fresh layer thins."
+      }
+    },
+    "share_template": "I thought the UAE aquifer had lost {prediction}% of its fresh groundwater since 1969. The actual figure is 96%."
+  },
+  "q5": {
+    "id": "q5",
+    "act": 2,
+    "format": "multiple_choice",
+    "options": ["Equal to natural recharge (1×)", "About twice natural recharge (2×)", "About five times natural recharge (5×)", "About ten times natural recharge (10×)"],
+    "prompt": "The shallow aquifer receives water from natural rainfall and from human activity. What is the ratio of human-driven recharge to natural recharge today?",
+    "true_value": "About five times natural recharge (5×)",
+    "source_id": "src_005",
+    "translation": {
+      "element_1": {
+        "heading": "What the number is",
+        "body": "Artificial recharge — from irrigation returns, network leakage, treated effluent disposal, and ASR injection — is now roughly five times the natural rainfall recharge the shallow aquifer receives."
+      },
+      "element_2": {
+        "heading": "What it means hydrogeologically",
+        "body": "This is the technical definition of an anthropogenic aquifer. When human inputs dominate the recharge budget by this margin, the aquifer is no longer a natural system. Its geochemistry, salinity trajectory, and contaminant load are controlled by decisions made at the surface, not by climate or rainfall."
+      },
+      "element_3": {
+        "heading": "The timescale",
+        "body": "This ratio is recent. Before extensive desalination and TSE reuse, the ratio was reversed — natural recharge dominated, however limited. The inversion happened over roughly the last thirty years and continues to intensify."
+      },
+      "element_4": {
+        "heading": "What follows from this",
+        "body": "Whatever signal we send downward — the chemistry of irrigation water, the leakage of networks, the composition of treated effluent — that is now the signal the aquifer carries. The ground has stopped buffering. It is recording."
+      },
+      "element_5": {
+        "heading": "The source",
+        "body": "Triangulated from multiple Gulf hydrogeology reviews. The exact ratio is debated; the order of magnitude is not."
+      }
+    },
+    "share_template": "I thought UAE artificial recharge was {prediction} natural recharge. The actual ratio is about 5× — the aquifer is now defined by what we put in, not what falls from the sky."
+  },
+  "q6": {
+    "id": "q6",
+    "act": 2,
+    "format": "slider",
+    "range": { "min": 1990, "max": 2024, "step": 1, "step_phone": 1 },
+    "unit": "",
+    "display_unit": "year",
+    "prompt": "In which year was rising groundwater first formally documented as affecting building foundations in Al Ain?",
+    "true_value": 2006,
+    "source_id": "src_006",
+    "translation": {
+      "element_1": {
+        "heading": "What the number is",
+        "body": "Rising groundwater levels in Al Ain — caused by treated effluent disposal and desalinated water used for landscape irrigation — were first formally documented in 2006. The issue has been continuously present since, with peer-reviewed analysis in 2014 and active municipal response by 2024."
+      },
+      "element_2": {
+        "heading": "What it means hydrogeologically",
+        "body": "When inputs to the shallow aquifer exceed outputs by enough margin for long enough, the water table rises. In an arid urban setting with a shallow aquifer and high evaporation, that rise meets infrastructure long before it meets surface. Basements flood. Foundations weaken. Subsidence appears."
+      },
+      "element_3": {
+        "heading": "The timescale",
+        "body": "Twenty years of documented evidence. Al Ain in 2006 is Dubai's denser higher-application zones in roughly 2030, on current trajectory. The mechanism is not different; the geology is comparable; the application intensity is higher in Dubai."
+      },
+      "element_4": {
+        "heading": "What follows from this",
+        "body": "In February 2024, Al Ain City Municipality began pumping approximately 3,500 m³ per day of rising groundwater to use as irrigation — closing the loop on over-recharged water. The institutional response to over-recharge was to recycle the over-recharged water as irrigation, creating a salt-concentrating cycle."
+      },
+      "element_5": {
+        "heading": "The source",
+        "body": "Aflaj report 2006; Murad et al. 2011 (UAEU, via The National); Mohamed et al. 2014, Proceedings of the IAHS; Al Ain City Municipality public announcement, February 2024."
+      }
+    },
+    "share_template": "I guessed Al Ain's rising groundwater problem started in {prediction}. First documented: 2006. Twenty years of evidence, and it's heading toward Dubai."
+  },
+  "q7": {
+    "id": "q7",
+    "act": 2,
+    "format": "slider",
+    "range": { "min": 0, "max": 100, "step": 1, "step_phone": 5 },
+    "unit": "%",
+    "display_unit": "percent still flooded",
+    "prompt": "During the April 2024 storms, 23.8 km² of Dubai was flooded. What percentage of that area remained submerged ten days after the rainfall ended?",
+    "true_value": 37,
+    "source_id": "src_007",
+    "translation": {
+      "element_1": {
+        "heading": "What the number is",
+        "body": "Roughly 37% of the originally flooded 23.8 km² remained submerged at day 10 — approximately 8.8 km² of standing water in a city designed for rapid drainage."
+      },
+      "element_2": {
+        "heading": "What it means hydrogeologically — and what follows",
+        "body": "Ten days of standing water is ten days of uncontrolled infiltration into the shallow aquifer. The recharge enters through roads, decommissioned sites, irrigated landscape, and any unsealed surface — carrying whatever contamination the urban surface had been holding. This is the textbook mechanism for pulse-recharge events to mobilise legacy contamination. Nobody publicly sampled the geochemistry of that recharge."
+      },
+      "element_3": {
+        "heading": "The timescale",
+        "body": "Storm-pulse events are episodic but cumulatively significant. Under intensifying regional climate projections, their contribution to anthropogenic recharge grows. April 2024 was not the last event of its kind. It was an early one."
+      },
+      "element_5": {
+        "heading": "The source",
+        "body": "Peer-reviewed flood footprint analysis, Nature / npj Climate and Atmospheric Science 2025. The figure is conservative; flooded-area mapping methodologies vary, and persistent saturation in less visible areas may extend further."
+      }
+    },
+    "share_template": "I thought {prediction}% of Dubai's April 2024 flood area was still underwater after 10 days. The actual figure is 37% — and nobody sampled what infiltrated the aquifer."
+  },
+  "q8": {
+    "id": "q8",
+    "act": 3,
+    "format": "multiple_choice",
+    "options": [
+      "Stormwater overflow only",
+      "Industrial discharge",
+      "Treated sewage effluent including emergency overflow",
+      "Saline groundwater pumped from rising water tables"
+    ],
+    "prompt": "In October 2025, Dubai Municipality announced a 4 km subsea pipeline to discharge what kind of water to the sea?",
+    "true_value": "Treated sewage effluent including emergency overflow",
+    "source_id": "src_008",
+    "translation": {
+      "element_1": {
+        "heading": "What the number is",
+        "body": "A 4 km subsea pipeline, 2 m in diameter, with 9 m³/s discharge capacity. Designed to convey treated sewage effluent and emergency overflow from the Jebel Ali treatment area to the Gulf."
+      },
+      "element_2": {
+        "heading": "What it means hydrogeologically",
+        "body": "For three decades, the strategic position has been that every drop of treated effluent must be used on land — irrigation, district cooling, indirect potable reserve. The strategy is built on land absorption. The decision to build an outfall to the sea reverses that premise. It is the institutional acknowledgement that the land cannot absorb what the system is producing."
+      },
+      "element_3": {
+        "heading": "The timescale",
+        "body": "Announced October 2025. Standing infrastructure shifts the strategic posture permanently. The framing implies emergency-only operation, but standing infrastructure changes the default operating envelope. What is built will be used."
+      },
+      "element_4": {
+        "heading": "What follows from this",
+        "body": "The treated effluent that enters the sea joins a marine compartment already carrying brine load. The combination of high-salinity desalination brine and nutrient-bearing treated effluent in the same coastal zone is the chemistry mixture the published literature on similar systems has flagged repeatedly. The receiving environment is the same one Dubai's coastline depends on for tourism, aquaculture, and waterfront real estate."
+      },
+      "element_5": {
+        "heading": "The source",
+        "body": "Smart Water Magazine, October 2025; Dubai Municipality primary press release. Quantitative discharge limits, water quality criteria, and ecological monitoring protocols at the outfall are not publicly specified in the announcement."
+      }
+    },
+    "share_template": "I didn't know about Dubai's new 4 km subsea pipeline to discharge treated sewage effluent into the Gulf. It's the institutional acknowledgement that the land can't absorb what the system produces."
+  },
+  "q9": {
+    "id": "q9",
+    "act": 3,
+    "format": "slider",
+    "range": { "min": 1970, "max": 2025, "step": 1, "step_phone": 1 },
+    "unit": "",
+    "display_unit": "year established",
+    "prompt": "When was DECCA — the Dubai Environment, Climate Change and Sustainability Authority, the body that would integrate the question this game has been asking — established?",
+    "true_value": 2024,
+    "source_id": "src_009",
+    "translation": {
+      "element_1": {
+        "heading": "What the number is",
+        "body": "DECCA was established by Dubai Law No. 11 of 2024. As of mid-2026, it is approximately eighteen months old."
+      },
+      "element_2": {
+        "heading": "What it means hydrogeologically",
+        "body": "The strategic decisions that produced the inversion this game describes were locked in before DECCA existed. Reuse expansion, ASR scale-up, landscape irrigation intensity, district cooling proliferation — all were operational at scale before any single authority was given the integrating brief. DECCA inherited a system already in motion."
+      },
+      "element_3": {
+        "heading": "The timescale",
+        "body": "Eighteen months. The regulatory frameworks DECCA must work alongside — the 2011 irrigation reuse standard, older municipal codes, the federal water security framework — were drafted under a different premise. Replacing them is a multi-year programme. The trajectory described in this game is not waiting for that programme to complete."
+      },
+      "element_4": {
+        "heading": "What follows from this",
+        "body": "No published, integrated groundwater fate standard currently exists for the Emirate. The 2011 irrigation reuse standard remains the primary applicable framework — single-parameter compliance, drafted before reuse scaled. The question of who owns the integrated subsurface fate problem does not yet have an answer in published regulation."
+      },
+      "element_5": {
+        "heading": "The source",
+        "body": "Dubai Law No. 11 of 2024, Government of Dubai gazette. DECCA's published remit covers climate strategy, environmental indicators, and soil exploitation oversight. Integrated subsurface fate as a defined regulatory category does not appear in current published frameworks."
+      }
+    },
+    "share_template": "I guessed Dubai's integrating environmental authority was established in {prediction}. Actual: 2024 — eighteen months old, inheriting a system already in motion."
+  },
+  "q10": {
+    "id": "q10",
+    "act": 3,
+    "format": "reflective",
+    "options": [
+      "I didn't realise this picture existed.",
+      "Different specialists own different pieces, and nobody integrates.",
+      "There is no institutional incentive to ask the integrated question.",
+      "All three are true."
+    ],
+    "prompt": "You have now seen nine facts. Each one is public. None of them is new. Why do you think nobody had assembled them before?"
+  }
 }

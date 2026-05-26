@@ -41,13 +41,22 @@ export interface MultipleChoiceQuestion {
   share_template: string
 }
 
+export interface ReflectiveQuestion {
+  id: string
+  stub?: false
+  act: number
+  format: 'reflective'
+  options: string[]
+  prompt: string
+}
+
 export interface StubQuestion {
   id: string
   stub: true
   act: number
 }
 
-export type Question = SliderQuestion | MultipleChoiceQuestion | StubQuestion
+export type Question = SliderQuestion | MultipleChoiceQuestion | ReflectiveQuestion | StubQuestion
 
 export interface Source {
   title: string

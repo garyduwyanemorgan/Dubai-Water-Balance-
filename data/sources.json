@@ -7,5 +7,77 @@
     "url": "https://www.dsc.gov.ae/",
     "claim_used": "Dubai population 370,000 (1985) → approximately 3.7M (2024)",
     "verification_status": "pending"
+  },
+  "src_002": {
+    "title": "UAE Water Use Per Capita",
+    "authors": "FAO; World Bank",
+    "year": 2023,
+    "publication": "FAO AQUASTAT / World Bank Open Data",
+    "url": "https://www.fao.org/aquastat/",
+    "claim_used": "UAE per-capita water consumption approximately 550 litres per person per day across all uses",
+    "verification_status": "pending"
+  },
+  "src_003": {
+    "title": "Global Desalination Capacity by Region",
+    "authors": "International Desalination Association; Ihsanullah et al.",
+    "year": 2026,
+    "publication": "IDA Annual Report; npj Clean Water",
+    "url": "https://idadesal.org/",
+    "claim_used": "GCC states produce approximately 55% of global desalinated water output",
+    "verification_status": "pending"
+  },
+  "src_004": {
+    "title": "Long-term Storage Decline in UAE Quaternary Aquifer",
+    "authors": "Sherif et al.",
+    "year": 2021,
+    "publication": "Water (MDPI)",
+    "url": "https://doi.org/10.3390/w13060769",
+    "claim_used": "UAE Quaternary aquifer fresh storage 238 km³ (1969) → 10 km³ (2015), a 96% decline",
+    "verification_status": "pending"
+  },
+  "src_005": {
+    "title": "Anthropogenic Recharge in UAE Shallow Aquifer Systems",
+    "authors": "Multiple authors (triangulated)",
+    "year": 2023,
+    "publication": "Multiple peer-reviewed sources",
+    "url": "https://doi.org/10.1016/j.jhydrol.2020.125329",
+    "claim_used": "Artificial recharge approximately 5× natural rainfall recharge to the shallow UAE aquifer",
+    "verification_status": "pending"
+  },
+  "src_006": {
+    "title": "Rising Groundwater in Al Ain Urban Area",
+    "authors": "Murad et al.; Mohamed et al.; Al Ain City Municipality",
+    "year": 2024,
+    "publication": "UAEU / Proceedings of the IAHS / Municipality press release",
+    "url": "https://doi.org/10.5194/piahs-364-491-2014",
+    "claim_used": "Rising groundwater first formally documented in Al Ain in 2006; municipality began pumping 3,500 m³/day in February 2024",
+    "verification_status": "pending"
+  },
+  "src_007": {
+    "title": "Flood Footprint Analysis — UAE April 2024",
+    "authors": "Masoom et al.",
+    "year": 2025,
+    "publication": "npj Climate and Atmospheric Science (Nature Portfolio)",
+    "url": "https://doi.org/10.1038/s41612-025-00907-4",
+    "claim_used": "23.8 km² of Dubai flooded; approximately 37% (8.8 km²) still submerged 10 days after April 2024 rainfall event",
+    "verification_status": "pending"
+  },
+  "src_008": {
+    "title": "Dubai Municipality Subsea Effluent Pipeline — Jebel Ali",
+    "authors": "Dubai Municipality",
+    "year": 2025,
+    "publication": "Dubai Municipality press release; Smart Water Magazine",
+    "url": "https://www.smartwatermagazine.com/",
+    "claim_used": "4 km subsea pipeline, 2 m diameter, 9 m³/s capacity, to discharge treated sewage effluent and emergency overflow from Jebel Ali to the Gulf. Announced October 2025.",
+    "verification_status": "pending"
+  },
+  "src_009": {
+    "title": "Dubai Law No. 11 of 2024 — Establishment of DECCA",
+    "authors": "Government of Dubai",
+    "year": 2024,
+    "publication": "Government of Dubai Official Gazette",
+    "url": "https://www.decca.gov.ae/",
+    "claim_used": "DECCA (Dubai Environment, Climate Change and Sustainability Authority) established by Dubai Law No. 11 of 2024",
+    "verification_status": "pending"
   }
 }
