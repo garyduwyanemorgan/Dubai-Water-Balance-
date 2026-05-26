@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useGameStore } from '@/lib/state'
 import { useIsPhone } from '@/lib/useMediaQuery'
+import { getAllQuestions } from '@/lib/questions'
 import ProgressBar from '@/components/ui/ProgressBar'
 import CitationSheet from '@/components/ui/CitationSheet'
 
@@ -13,6 +14,13 @@ const QuestionScene = dynamic(() => import('./(scenes)/QuestionScene'), { ssr: f
 const Synthesis = dynamic(() => import('./(scenes)/Synthesis'), { ssr: false })
 
 const QUESTION_IDS = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10']
+
+// Act backgrounds — subtle progression, not jarring
+const ACT_BACKGROUNDS: Record<number, string> = {
+  1: '#E8DCC4', // sand — warm and familiar
+  2: '#DCCFB0', // amber-tinted sand — muted, something has shifted
+  3: '#D4CFC8', // grey-sand — institutional, cooler
+}
 
 export default function GameShell() {
   const {
@@ -30,12 +38,16 @@ export default function GameShell() {
     setIsPhone(isPhone)
   }, [isPhone, setIsPhone])
 
+  const questions = getAllQuestions()
   const currentQuestionId = QUESTION_IDS[currentQuestion] ?? 'q1'
+  const currentAct = questions[currentQuestion]?.act ?? 1
+  const bgColor = ACT_BACKGROUNDS[currentAct] ?? ACT_BACKGROUNDS[1]
 
   return (
-    <main
+    <motion.main
       className="relative min-h-[100dvh] flex flex-col overflow-hidden"
-      style={{ backgroundColor: 'var(--sand)' }}
+      animate={{ backgroundColor: bgColor }}
+      transition={{ duration: 1.5, ease: 'easeInOut' }}
     >
       {/* Progress bar — only shown during questions */}
       {phase === 'question' && <ProgressBar current={currentQuestion} />}
@@ -90,6 +102,6 @@ export default function GameShell() {
         isOpen={citationOpen}
         onClose={closeCitation}
       />
-    </main>
+    </motion.main>
   )
 }
