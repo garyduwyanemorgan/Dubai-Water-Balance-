@@ -84,10 +84,10 @@
     "notes": "Verify exact share and definition against source."
   },
   "src_008": {
-    "title": "IR222 Phase 1 — network leakage assessment",
-    "authors": "GDM Enviro Consulting (internal report)",
+    "title": "Network leakage assessment — GDM Enviro Consulting",
+    "authors": "GDM Enviro Consulting (water-balance analysis)",
     "year": 2024,
-    "journal": "IR222 Phase 1",
+    "journal": "GDM Enviro Consulting (water-balance analysis)",
     "doi": "",
     "url": "",
     "claim_used": "Network leakage 77,000–93,000 m³/day",
@@ -96,10 +96,10 @@
     "notes": "In hand; verify exact figures and paraphrase only with citation."
   },
   "src_009": {
-    "title": "IR222 Phase 2 — TSE chemistry baseline",
-    "authors": "GDM Enviro Consulting (internal report)",
+    "title": "TSE chemistry baseline — GDM Enviro Consulting",
+    "authors": "GDM Enviro Consulting (water-balance analysis)",
     "year": 2024,
-    "journal": "IR222 Phase 2",
+    "journal": "GDM Enviro Consulting (water-balance analysis)",
     "doi": "",
     "url": "",
     "claim_used": "TSE Na 252 mg/L, Cl 750 mg/L (max)",

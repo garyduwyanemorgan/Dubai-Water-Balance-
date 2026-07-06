@@ -1,5 +1,6 @@
 import coeff from "@/data/scenarios.json";
 import type {
+  Endpoint,
   ScenarioParams,
   ScenarioResult,
   SeriesPoint,
@@ -98,22 +99,43 @@ function round(n: number): number {
   return Math.round(n * 100) / 100;
 }
 
+type BandKey = keyof typeof coeff.uncertainty;
+
+// Attach a fanning p10–p90 envelope to a series. The half-width grows with the
+// forecast horizon, so certainty is highest near "today" and widest at 2040.
+// Illustrative only — this is scenario spread, not a calibrated statistical CI.
+function withBand(series: SeriesPoint[], key: BandKey): SeriesPoint[] {
+  const band = coeff.uncertainty[key] as { base: number; growth: number };
+  return series.map((pt, i) => {
+    const halfWidth = band.base + band.growth * i;
+    return {
+      ...pt,
+      lo: round(Math.max(0, pt.value * (1 - halfWidth))),
+      hi: round(pt.value * (1 + halfWidth)),
+    };
+  });
+}
+
+function endpoint(series: SeriesPoint[]): Endpoint {
+  const p = series[series.length - 1];
+  return { value: p.value, lo: p.lo ?? p.value, hi: p.hi ?? p.value };
+}
+
 export function computeScenario(p: ScenarioParams): ScenarioResult {
-  const salinity = salinitySeries(p);
-  const saltLoading = saltLoadingSeries(p);
-  const waterTable = waterTableSeries(p);
-  const marine = marineSeries(p);
-  const last = <T extends SeriesPoint>(s: T[]) => s[s.length - 1].value;
+  const salinity = withBand(salinitySeries(p), "salinity");
+  const saltLoading = withBand(saltLoadingSeries(p), "saltLoading");
+  const waterTable = withBand(waterTableSeries(p), "waterTable");
+  const marine = withBand(marineSeries(p), "marine");
   return {
     salinity,
     saltLoading,
     waterTable,
     marine,
     endpoints: {
-      salinity2040: last(salinity),
-      waterTableDepth2040: last(waterTable),
-      saltLoading2040: last(saltLoading),
-      marine2040: last(marine),
+      salinity2040: endpoint(salinity),
+      waterTableDepth2040: endpoint(waterTable),
+      saltLoading2040: endpoint(saltLoading),
+      marine2040: endpoint(marine),
     },
   };
 }

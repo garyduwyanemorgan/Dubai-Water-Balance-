@@ -89,6 +89,17 @@ export interface ScenarioParams {
 export interface SeriesPoint {
   year: number;
   value: number;
+  /** Lower bound of the plausible (p10) uncertainty envelope. */
+  lo?: number;
+  /** Upper bound of the plausible (p90) uncertainty envelope. */
+  hi?: number;
+}
+
+/** A central value with its plausible low/high envelope at the 2040 horizon. */
+export interface Endpoint {
+  value: number;
+  lo: number;
+  hi: number;
 }
 
 export interface ScenarioResult {
@@ -97,9 +108,9 @@ export interface ScenarioResult {
   waterTable: SeriesPoint[];
   marine: SeriesPoint[];
   endpoints: {
-    salinity2040: number;
-    waterTableDepth2040: number;
-    saltLoading2040: number;
-    marine2040: number;
+    salinity2040: Endpoint;
+    waterTableDepth2040: Endpoint;
+    saltLoading2040: Endpoint;
+    marine2040: Endpoint;
   };
 }

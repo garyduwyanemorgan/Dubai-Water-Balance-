@@ -28,7 +28,21 @@ export default function NavRail() {
       className="fixed left-0 top-0 z-30 hidden h-screen w-44 flex-col justify-between border-r border-deepblue/10 bg-sand/60 px-5 py-6 backdrop-blur-sm md:flex"
     >
       <div>
-        <a href="#scarcity" className="block">
+        <a href="#scarcity" className="group block">
+          <div className="relative mb-3 inline-flex">
+            {/* Glowing mosaic halo — intensifies on hover so the mark pops */}
+            <span
+              aria-hidden
+              className="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-brackish via-amber to-brine opacity-60 blur-md transition-all duration-500 group-hover:opacity-100 group-hover:blur-lg"
+            />
+            <img
+              src="/logo.png"
+              alt="GDM Enviro Consulting logo"
+              width={56}
+              height={56}
+              className="relative h-14 w-14 rounded-full object-cover shadow-lg ring-2 ring-sand-light transition-transform duration-500 ease-hydro group-hover:scale-110 group-hover:-rotate-2"
+            />
+          </div>
           <span className="block font-serif text-base font-semibold leading-tight text-deepblue">
             GDM
           </span>

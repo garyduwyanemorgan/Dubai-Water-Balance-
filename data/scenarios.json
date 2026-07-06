@@ -40,5 +40,12 @@
     "monitoring": 0.92,
     "quality": 0.7,
     "full": 0.45
+  },
+  "uncertainty": {
+    "note": "Illustrative p10–p90 envelope as a fraction of the central value. Half-width = base + growth * (years from start), so the band fans out toward 2040 as forecast confidence decays. Not a formal statistical interval.",
+    "salinity": { "base": 0.08, "growth": 0.012 },
+    "saltLoading": { "base": 0.1, "growth": 0.014 },
+    "waterTable": { "base": 0.09, "growth": 0.011 },
+    "marine": { "base": 0.05, "growth": 0.006 }
   }
 }

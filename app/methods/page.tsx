@@ -82,8 +82,8 @@ export default function MethodsPage() {
         <Eq>Q_salt(t) = Σ V_TSE · c_(Na+Cl) · f_ret · k_soil</Eq>
         <p className="text-sm leading-relaxed text-ink/80">
           Per-year integration of salt delivered to the soil column from reused
-          water. TSE volume comes from the slider; concentration from the IR222
-          baseline; the irrigation return fraction and soil dissolution
+          water. TSE volume comes from the slider; concentration from the GDM
+          water-balance baseline; the irrigation return fraction and soil dissolution
           multiplier are held constant.
         </p>
         <table className="mt-3 w-full text-sm">

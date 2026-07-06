@@ -196,11 +196,19 @@ export default function Trajectory() {
           At this scenario, by 2040 the highest-application zones see shallow
           aquifer salinity reach{" "}
           <span className="font-semibold text-brackish">
-            {e.salinity2040.toFixed(1)} dS/m
+            {e.salinity2040.value.toFixed(1)} dS/m
+          </span>{" "}
+          <span className="text-base font-normal text-muted">
+            (plausible {e.salinity2040.lo.toFixed(1)}–
+            {e.salinity2040.hi.toFixed(1)})
           </span>{" "}
           and water tables within{" "}
           <span className="font-semibold text-deepblue">
-            {e.waterTableDepth2040.toFixed(1)} m
+            {e.waterTableDepth2040.value.toFixed(1)} m
+          </span>{" "}
+          <span className="text-base font-normal text-muted">
+            (plausible {e.waterTableDepth2040.lo.toFixed(1)}–
+            {e.waterTableDepth2040.hi.toFixed(1)})
           </span>{" "}
           of the surface.
         </p>
