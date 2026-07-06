@@ -11,6 +11,22 @@ export default function Scarcity() {
       className="scene flex min-h-screen flex-col items-center justify-center bg-sand px-6 py-20 md:pl-44"
     >
       <div className="mx-auto max-w-2xl text-center">
+        {/* Brand mark — visible on every viewport (the nav rail is desktop-only) */}
+        <div className="mb-8 flex justify-center">
+          <div className="group relative inline-flex">
+            <span
+              aria-hidden
+              className="absolute -inset-2 rounded-full bg-gradient-to-tr from-brackish via-amber to-brine opacity-60 blur-lg transition-all duration-500 group-hover:opacity-100"
+            />
+            <img
+              src="/logo.png"
+              alt="GDM Enviro Consulting logo"
+              width={80}
+              height={80}
+              className="relative h-20 w-20 rounded-full object-cover shadow-xl ring-2 ring-sand-light transition-transform duration-500 ease-hydro group-hover:scale-105"
+            />
+          </div>
+        </div>
         <span className="text-xs uppercase tracking-widest text-muted">
           01 · The Old Problem
         </span>
